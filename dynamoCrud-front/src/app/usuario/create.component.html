@@ -1,0 +1,28 @@
+<div class="container">
+    <ngx-spinner
+    bdColor="rgba(51,51,51,0.8)"
+    size="medium"
+    color="#fff"
+    type="ball-scale-multiple"
+    >
+    <p style="font-size: 20px; color: white"></p>
+    </ngx-spinner>
+<div class="row mt-5">
+    <div class="col-md-4 mx-auto">
+        <form (ngSubmit)="onCreate()" #f="ngForm" novalidate>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name"
+                [(ngModel)]="name" required autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" name="lastName"
+                [(ngModel)]="lastName" required autocomplete="off">
+            </div>
+            <button class="btn btn-outline-success w-100 mt-3" [disabled]="!f.valid">CREATE</button>
+            <button class="btn btn-outline-primary w-100 mt-3" routerLink='/'><i class="fas fa-arrow-alt-circle-left"></i> BACK</button>
+        </form>
+    </div>
+</div>
+</div>
